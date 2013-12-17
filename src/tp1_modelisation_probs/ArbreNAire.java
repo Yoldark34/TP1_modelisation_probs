@@ -32,8 +32,8 @@ public class ArbreNAire<T>{
 		this.vue.addFils(item);
 	}
 
-	public Object getItem() {
-		return this.vue;
+	public T getItem() {
+		return this.vue.getInfo();
 	}
 
 	public boolean isRacine() {
@@ -64,6 +64,17 @@ public class ArbreNAire<T>{
 		this.vue.suppressNoeud();
 	}
 
+	@Override 
+	public String toString() {
+		return this.vue.toString();
+	}
+	
+	public int getHeuristique() {
+		return this.vue.getHeuristique();
+	}
 
+	public void setHeuristique(int heuristique) {
+		this.vue.setHeuristique(heuristique);
+	}
 	
 }

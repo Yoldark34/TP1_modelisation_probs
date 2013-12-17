@@ -14,8 +14,21 @@ import java.util.ArrayList;
  */
 public class Noeud <T> {
 	private T info;
+
+	public T getInfo() {
+		return info;
+	}
+
+	public int getHeuristique() {
+		return heuristique;
+	}
+
+	public void setHeuristique(int heuristique) {
+		this.heuristique = heuristique;
+	}
 	private Noeud<T> pere;
 	private final ArrayList<Noeud<T>> fils  = new ArrayList<>();
+	private int heuristique;
 
 	public Noeud(T info) {
 		this.info = info;
@@ -62,5 +75,8 @@ public class Noeud <T> {
 				n = null;
 			}
 		}
+	}
+	public String toString() {
+		return info.toString();
 	}
 }
